@@ -4,6 +4,15 @@
   border-radius: 5px;
 }
 
+@media (max-width: 550px) {
+  .account-settings {
+    margin: unset;
+    padding: unset;
+    border-radius: 5px;
+  }
+  
+}
+
 .allSections {
   display: flex;
   flex-direction: column;
@@ -14,6 +23,13 @@
   background-color: #2C2B3F;
   padding: 27px;
   border-radius: 5px;
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: unset;
+    padding-bottom: 30px;
+  }  
 }
 
 .fields {
@@ -89,6 +105,12 @@ input[type="passwordForChange"] {
   -moz-text-security: disc;
   -ms-text-security: disc;
 }
+
+@media (max-width: 1400px){
+  input[type="passwordForChange"] {
+    width: 100%;
+  }
+}
   
   label {
     color: white;
@@ -111,14 +133,23 @@ input[type="passwordForChange"] {
     font-size: 20px;
 }
 .toggle-switch-profile label {
-  width: 33rem;
+  width: 28rem;
   padding: 10px;
-  border: 2px solid #E5E7E9;
   border-radius: 5px;
   font-size: 16px;
   color: black;
   font-family: var(--font3);
-  background-color: #E5E7E9;
+  margin: unset;
+}
+
+@media (max-width : 1400px){
+  .toggle-switch-profile label{
+    width: 90%;
+  }
+
+  .field{
+    justify-content: space-between;
+  }
 }
   
   .toggle-button {

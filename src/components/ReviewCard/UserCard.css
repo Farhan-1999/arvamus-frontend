@@ -75,9 +75,9 @@
     width: 130PX;
     height: 130PX;
     border-radius: 50%;
-    min-width: 48px;
+    min-width: 130PX;
     text-transform: uppercase;
-    min-height: 48px;
+    min-height: 130PX;
 }
 
 .user-card .user-header .rating i {
@@ -136,7 +136,7 @@
 
 @media (max-width: 400px) {
     .user-card .user-details .share-group {
-        border-radius: 50%;
+        /* border-radius: 50%; */
     }
 }
 
@@ -163,6 +163,6 @@
 
 @media (max-width: 400px) {
     .user-card .user-details .share-group>span {
-        display: none;
+        /* display: none; */
     }
 }

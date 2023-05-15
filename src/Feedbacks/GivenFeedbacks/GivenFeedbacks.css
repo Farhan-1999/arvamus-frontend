@@ -23,6 +23,19 @@ main{
     padding: 20px;
 }
 
+@media (max-width: 1024px) {
+  main {
+    max-width: 85vw !important
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    padding: unset !important;
+  }
+}
+
+
 .labels {
   display: flex;
   flex-direction: column;

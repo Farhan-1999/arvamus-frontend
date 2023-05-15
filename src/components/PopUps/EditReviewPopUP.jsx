@@ -60,7 +60,7 @@ export function EditReviewPopUP(props) {
               <div className="signup-row">
                 <div>
                   <h3 className="details-review-heading">
-                    {submitOrUpdate} Rating
+                    {submitOrUpdate} Review
                   </h3>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>

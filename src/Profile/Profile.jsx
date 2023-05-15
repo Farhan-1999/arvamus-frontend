@@ -179,7 +179,7 @@ const Profile = () => {
                       onChange={(e) => setDesignation(e.target.value)}
                     />
                   </div>
-                  <div className="toggle-switch-profile">
+                  <div className="field toggle-switch-profile">
                     <label>Show Your Ratings to others :</label>
                     <button
                       className={`toggle-button ${

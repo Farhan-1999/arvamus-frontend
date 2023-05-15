@@ -44,6 +44,7 @@ const GivenFeedbacks = () => {
       });
 
       getReviewAndRatingByReviewer(body).then((data) => {
+        console.log(data)
         if (data.status === false) {
           return;
         } else {

@@ -10,8 +10,14 @@
   text-align: left;
   position: sticky;
   z-index: 99999;
+  display: flex;
+  flex-direction: column;
 }
 
+.sidebar a.link:last-child {
+  margin-top: auto;
+  background: #f3d779;
+}
 .sidebar-logo-image {
   width: 50px;
 }
@@ -40,6 +46,7 @@
   padding: 10px 15px;
   gap: 15px;
   /* transition: all 0.5s; */
+  align-items: center;
 }
 
 .link:hover {

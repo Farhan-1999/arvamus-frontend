@@ -51,9 +51,32 @@
 .signup-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   gap: 40px;
+}
+
+@media (max-width : 1400px){
+  .signup-row {
+    align-items: center;
+    flex-direction: column;
+    gap: unset;
+  }
+
+  .field{
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 98% !important;
+  }
+}
+
+.field.toggle-switch-profile {
+  flex-direction: row;
+  border: 1px solid white;
+  background: white;
+  border-radius: 5px;
 }
 
 .signup-row .signup-field {
