@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./LoginPage.css"; // import the CSS file
 
 import logoImage from "../Images/logor.png";
-import userService from "../Services/userService";
 import Navbar from "../General/Navbar";
 import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { userLogin } from "../Services/userService";
 
 function LoginPage() {
   const attributessOfToast = {
@@ -63,7 +63,7 @@ function LoginPage() {
       email: email,
       password: password,
     });
-    userService.userLogin(body).then((response) => {
+    userLogin(body).then((response) => {
       if (response.status !== true) {
         toast("Login failed", attributessOfToast);
         return;

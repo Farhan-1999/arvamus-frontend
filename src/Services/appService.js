@@ -1,6 +1,8 @@
-async function getAllTeachers() {
+import { ServerEnum } from "../ServerEnum";
+
+export async function getAllTeachers() {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/get_all_teachers", {
+    fetch(ServerEnum.API_URL + "get_all_teachers", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -22,9 +24,9 @@ async function getAllTeachers() {
   });
 }
 
-async function getAllStaff() {
+export async function getAllStaff() {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/get_all_staff", {
+    fetch(ServerEnum.API_URL + "get_all_staff", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,9 +47,9 @@ async function getAllStaff() {
       });
   });
 }
-async function getUserById(body) {
+export async function getUserById(body) {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/get_user_by_id", {
+    fetch(ServerEnum.API_URL + "get_user_by_id", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,9 +71,9 @@ async function getUserById(body) {
       });
   });
 }
-async function updateUser(body) {
+export async function updateUser(body) {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/update_info", {
+    fetch(ServerEnum.API_URL + "update_info", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,9 +95,9 @@ async function updateUser(body) {
       });
   });
 }
-async function changePassword(body) {
+export async function changePassword(body) {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/change_password", {
+    fetch(ServerEnum.API_URL + "change_password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -117,11 +119,3 @@ async function changePassword(body) {
       });
   });
 }
-
-module.exports = {
-  getAllTeachers: getAllTeachers,
-  getAllStaff,
-  getUserById,
-  updateUser,
-  changePassword,
-};

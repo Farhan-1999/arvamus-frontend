@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import logoImage from "../Images/logor.png";
-import userService from "../Services/userService";
 import Navbar from "../General/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { ServerEnum } from "../ServerEnum";
+import { userSignUp } from "../Services/userService";
 
 function Signup() {
   const navigate = useNavigate();
@@ -85,7 +85,7 @@ function Signup() {
     });
 
     if (Object.keys(errors).length === 0) {
-      const response = await userService.userSignUp(body);
+      const response = await userSignUp(body);
       if (response === null) {
         toast("Error in signup", attributessOfToast);
       } else {

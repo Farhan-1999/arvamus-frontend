@@ -2,7 +2,8 @@
 /* eslint-disable indent */
 module.exports = {
   ServerEnum: {
-    API_URL: "http://localhost:5000/api/v1",
+    API_URL: "http://localhost:5000/api/",
+    // API_URL: "https://arvamus-backend-awbq.onrender.com/api/",
 
     RESPONSE_CONNECTION_ERROR: "CONNECTION_ERROR",
     RESPONSE_SUCCESS: "SUCCESS",

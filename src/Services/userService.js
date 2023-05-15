@@ -1,8 +1,8 @@
-const { type } = require("@testing-library/user-event/dist/type");
+import { ServerEnum } from "../ServerEnum";
 
-async function userSignUp(body) {
+export async function userSignUp(body) {
   try {
-    const response = await fetch("http://localhost:5000/api/signup", {
+    const response = await fetch(ServerEnum.API_URL + "signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: body,
@@ -27,9 +27,9 @@ async function userSignUp(body) {
 }
 
 // user login
-async function userLogin(body) {
+export async function userLogin(body) {
   return new Promise((resolve, reject) => {
-    fetch("http://localhost:5000/api/login", {
+    fetch(ServerEnum.API_URL + "login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,9 +53,9 @@ async function userLogin(body) {
 }
 
 // update user info
-async function updateUserInfo(body) {
+export async function updateUserInfo(body) {
   try {
-    const response = await fetch("http://localhost:5000/api/update_info", {
+    const response = await fetch(ServerEnum.API_URL + "update_info", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: body,
@@ -75,9 +75,9 @@ async function updateUserInfo(body) {
 }
 
 // update user password
-async function updateUserPassword(body) {
+export async function updateUserPassword(body) {
   try {
-    const response = await fetch("http://localhost:5000/api/change_password", {
+    const response = await fetch(ServerEnum.API_URL + "change_password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: body,
@@ -97,9 +97,9 @@ async function updateUserPassword(body) {
 }
 
 // forget password
-async function forgetPassword(body) {
+export async function forgetPassword(body) {
   try {
-    const response = await fetch("http://localhost:5000/api/forget_password", {
+    const response = await fetch(ServerEnum.API_URL + "forget_password", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: body,
@@ -117,11 +117,3 @@ async function forgetPassword(body) {
     return null;
   }
 }
-
-module.exports = {
-  userSignUp,
-  userLogin,
-  updateUserInfo,
-  updateUserPassword,
-  forgetPassword,
-};
