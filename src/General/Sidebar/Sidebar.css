@@ -15,7 +15,9 @@
 .sidebar-logo-image {
   width: 50px;
 }
-
+.logout-icon {
+  margin-top: 10px;
+}
 .top_section {
   display: flex;
   align-items: center;

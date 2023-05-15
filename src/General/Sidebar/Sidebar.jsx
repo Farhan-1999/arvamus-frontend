@@ -8,6 +8,7 @@ import {
   FaRegUser,
   FaArrowAltCircleDown,
   FaArrowCircleUp,
+  FaSignOutAlt 
 
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -18,6 +19,14 @@ const Sidebar = ({ children }) => {
   const toggle = () => {
     setIsOpen(!isOpen);
     setShowImage(!showImage);
+  };
+  const handleLogout = () => {
+    // Clear local storage
+    localStorage.clear();
+  
+    // Perform any additional logout logic or redirects if needed
+    // For example, you can redirect the user to the login page
+    window.location.href = '/login';
   };
   const menuItem = [
     {
@@ -45,6 +54,10 @@ const Sidebar = ({ children }) => {
       path: "/profile",
       name: "profile",
       icon: <FaRegUser />,
+    },
+    {
+      name: "Logout",
+      icon:<FaSignOutAlt className="logout-icon" onClick={handleLogout}/>,
     },
   ];
   return (
