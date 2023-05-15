@@ -3,7 +3,7 @@ import Sidebar from "../General/Sidebar/Sidebar";
 import { EditRatingPopUP } from "../components/PopUps/EditRatingPopUP";
 import { EditReviewPopUP } from "../components/PopUps/EditReviewPopUP";
 import { UserCard } from "../components/ReviewCard/UserCard";
-// import { getAllTeachers } from "../Services/appService";
+import { getAllTeachers } from "../Services/appService";
 import { getReviewByRevieweeEmailAndReviewerId,giveReview,updateReview } from "../Services/reviewService";
 import {getRatingByRevieweeEmailAndReviewerId, giveRating ,updateRating} from "../Services/ratingService";
 import { ToastContainer, toast } from "react-toastify";
@@ -29,18 +29,18 @@ const Dashboard = () => {
     theme: "light",
   };
 
-  // useEffect(() => {
-  //   async function fetchTeachers() {
-  //     getAllTeachers().then((data) => {
-  //       if (data.status === false) {
-  //         return;
-  //       } else {
-  //         setTeachers(data.response);
-  //       }
-  //     });
-  //   }
-  //   fetchTeachers();
-  // }, []);
+  useEffect(() => {
+    async function fetchTeachers() {
+      getAllTeachers().then((data) => {
+        if (data.status === false) {
+          return;
+        } else {
+          setTeachers(data.response);
+        }
+      });
+    }
+    fetchTeachers();
+  }, []);
   
   const onRatingButtonClick = async (data) => {
     const userId = localStorage.getItem("userId");
