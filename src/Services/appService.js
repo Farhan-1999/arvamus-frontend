@@ -119,7 +119,7 @@ async function changePassword(body) {
 }
 
 module.exports = {
-  getAllTeachers,
+  getAllTeachers: getAllTeachers,
   getAllStaff,
   getUserById,
   updateUser,
