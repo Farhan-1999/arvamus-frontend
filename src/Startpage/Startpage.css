@@ -1,0 +1,46 @@
+.animated-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  
+  .animation-complete {
+    opacity: 1;
+  }
+  
+  .animated-image {
+    animation: slideFromTop 1s ease-in;
+  }
+  
+  .animated-text {
+    animation: slideFromLeft 1s ease-in;
+    color: white;
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-family: var(--font3);
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @keyframes slideFromTop {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

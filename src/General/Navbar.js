@@ -21,7 +21,7 @@ function Navbar() {
       <ul className="navbar-list">
         <li className={activeLink === '/home' ? 'navbar-item active' : 'navbar-item'}>
           <Link to="/home" onClick={() => handleLinkClick('/home')}>
-            Home
+            About
           </Link>
         </li>
         <li className={activeLink === '/login' ? 'navbar-item active' : 'navbar-item'}>

@@ -1,0 +1,65 @@
+.about-container {
+    display: flex;
+    color: white;
+    background-color: #2C2B3F;
+    text-align: left;
+    width: 65%;
+    /* height: 90%; */
+    margin-top: 3%;
+    margin-left: 20%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .about-page-logo-image {
+    width: 7rem;
+    height: 7rem;
+    margin-top: 3%;
+  }
+
+  .u-section{
+    margin-bottom: 1rem;
+  }
+
+  .type-list{
+    margin-left: 2rem;
+  }
+  
+  .left-section {
+    width: 65%;
+    padding: 20px;
+    margin-right: 8%;
+  }
+  
+  .right-section {
+    width: 35%;
+    background-color: white;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: disc;
+  }
+  
+  .p-section {
+    margin-top: 20px;
+  }
+
+  .p-heading {
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+
+  .right-section img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 35%;
+    object-fit: contain; /* or object-fit: cover; */
+  }
+  

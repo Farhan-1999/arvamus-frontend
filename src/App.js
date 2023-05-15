@@ -10,8 +10,8 @@ import RatingForm from "./Feedbacks/FeedbackForms/RatingForm/RatingForm";
 import ReceivedFeedbacks from "./Feedbacks/ReceivedFeedbacks/ReceivedFeedbacks";
 import GivenFeedbacks from "./Feedbacks/GivenFeedbacks/GivenFeedbacks";
 import Dashboard from "./Dashboard/Dashboard";
-// import HomePage from "./HomePage/HomePage";
-// import ReviewForm from "./Reviews/TeacherReviews/IndividualReview/ReviewForm";
+import Aboutpage from "./Aboutpage/Aboutpage";
+import Startpage from "./Startpage/Startpage";
 
 // import { Navbar } from "./Navbar";
 
@@ -22,14 +22,14 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<Startpage />} />
           {/* <Route path="/" element={<Signup />} /> */}
           {/* <Route path="/" element={<SignupChoice />} /> */}
           {/* <Route path="/" element={<HomePage />} /> */}
           {/* <Route path="/" element={<TeacherReviews />} /> */}
           {/* <Route path="/" element={<IndividualReviews />} /> */}
           {/* <Route path="/signupChoice" element={<SignupChoice />} /> */}
-          {/* <Route path="/home" element={<HomePage />} /> */}
+          <Route path="/home" element={<Aboutpage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
